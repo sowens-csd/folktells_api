@@ -39,3 +39,19 @@ Map<String, dynamic> _$OnlineUserResponseToJson(OnlineUserResponse instance) =>
       'callChannel': instance.callChannel,
       'callPeerId': instance.callPeerId,
     };
+
+OnlineUserResponseList _$OnlineUserResponseListFromJson(
+        Map<String, dynamic> json) =>
+    OnlineUserResponseList(
+      json['count'] as int,
+      (json['result'] as List<dynamic>)
+          .map((e) => OnlineUserResponse.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$OnlineUserResponseListToJson(
+        OnlineUserResponseList instance) =>
+    <String, dynamic>{
+      'count': instance.count,
+      'result': instance.result.map((e) => e.toJson()).toList(),
+    };
