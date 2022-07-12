@@ -7,9 +7,9 @@ void main() {
   const String pageToken1 = "page1";
   group('mapping', () {
     test('json mapping roundtrips', () {
-      XShareGroupMember member1 = TestGroupMemberData.member1;
+      ShareGroupMember member1 = TestGroupMemberData.member1;
       var map = member1.toJson();
-      var member2 = XShareGroupMember.fromJson(map);
+      var member2 = ShareGroupMember.fromJson(map);
       expectExhaustiveCompareEquals(member1, member2);
     });
     test('ShareGroupMembers json mapping roundtrips with empty members', () {
@@ -75,7 +75,7 @@ void main() {
 }
 
 void expectExhaustiveCompareEquals(
-    XShareGroupMember member1, XShareGroupMember member2) {
+    ShareGroupMember member1, ShareGroupMember member2) {
   expect(member1.invitationId, member2.invitationId);
   expect(member1.groupId, member2.groupId);
   expect(member1.inviteAccepted, member2.inviteAccepted);

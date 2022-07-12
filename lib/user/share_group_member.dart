@@ -41,7 +41,7 @@ class MembershipStatus {
 
 /// A member in a [ShareGroup].
 @JsonSerializable()
-class XShareGroupMember extends VersionedItem {
+class ShareGroupMember extends VersionedItem {
   final String invitationId;
   final String groupId;
   final String memberId;
@@ -60,7 +60,7 @@ class XShareGroupMember extends VersionedItem {
   @JsonKey(includeIfNull: false)
   final String? customMsg;
 
-  XShareGroupMember(
+  ShareGroupMember(
       this.invitationId,
       this.groupId,
       this.memberId,
@@ -97,7 +97,7 @@ class XShareGroupMember extends VersionedItem {
     return "$runtimeType(iId=$invitationId, gId=$groupId, mId=$memberId, accepted=$inviteAccepted)";
   }
 
-  factory XShareGroupMember.fromJson(Map<String, dynamic> json) =>
+  factory ShareGroupMember.fromJson(Map<String, dynamic> json) =>
       _$ShareGroupMemberFromJson(json);
   Map<String, dynamic> toJson() => _$ShareGroupMemberToJson(this);
 
@@ -110,7 +110,7 @@ class XShareGroupMember extends VersionedItem {
   @override
   bool operator ==(dynamic other) {
     if (other.runtimeType != runtimeType) return false;
-    final XShareGroupMember typedOther = other;
+    final ShareGroupMember typedOther = other;
     return invitationId == typedOther.invitationId;
   }
 
@@ -121,9 +121,9 @@ class XShareGroupMember extends VersionedItem {
 @JsonSerializable(explicitToJson: true)
 class ShareGroupMembers {
   final SharedShareGroup group;
-  final List<XShareGroupMember> members = [];
+  final List<ShareGroupMember> members = [];
 
-  ShareGroupMembers(this.group, final List<XShareGroupMember> members) {
+  ShareGroupMembers(this.group, final List<ShareGroupMember> members) {
     this.members.addAll(members);
   }
 

@@ -6,8 +6,8 @@ part of 'share_group_member.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-XShareGroupMember _$ShareGroupMemberFromJson(Map<String, dynamic> json) =>
-    XShareGroupMember(
+ShareGroupMember _$ShareGroupMemberFromJson(Map<String, dynamic> json) =>
+    ShareGroupMember(
       json['invitationId'] as String,
       json['groupId'] as String,
       json['memberId'] as String,
@@ -26,7 +26,7 @@ XShareGroupMember _$ShareGroupMemberFromJson(Map<String, dynamic> json) =>
       json['customMsg'] as String?,
     );
 
-Map<String, dynamic> _$ShareGroupMemberToJson(XShareGroupMember instance) {
+Map<String, dynamic> _$ShareGroupMemberToJson(ShareGroupMember instance) {
   final val = <String, dynamic>{
     'version': instance.version,
     'baseVersion': instance.baseVersion,
@@ -59,7 +59,7 @@ ShareGroupMembers _$ShareGroupMembersFromJson(Map<String, dynamic> json) =>
     ShareGroupMembers(
       SharedShareGroup.fromJson(json['group'] as Map<String, dynamic>),
       (json['members'] as List<dynamic>)
-          .map((e) => XShareGroupMember.fromJson(e as Map<String, dynamic>))
+          .map((e) => ShareGroupMember.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 

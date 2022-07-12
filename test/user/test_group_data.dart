@@ -30,7 +30,7 @@ class TestGroupMemberData {
   static const int invitedOn1 = 2803;
   static const int localUpdateAt1 = 4932842830;
   static const int lastUpdated1 = 4932842835;
-  static XShareGroupMember member1 = XShareGroupMember(
+  static ShareGroupMember member1 = ShareGroupMember(
     invitationId1,
     TestShareGroupData.groupId1.asString(),
     TestOnlineUserData.userId1.asString(),
@@ -48,7 +48,7 @@ class TestGroupMemberData {
     TestShareGroupData.groupName1,
     TestGroupMemberData.customMsg1,
   );
-  static XShareGroupMember group2Member1 = XShareGroupMember(
+  static ShareGroupMember group2Member1 = ShareGroupMember(
     group2Member1InvitationId,
     TestShareGroupData.groupId2.asString(),
     TestOnlineUserData.userId1.asString(),
@@ -66,7 +66,7 @@ class TestGroupMemberData {
     TestShareGroupData.groupName2,
     TestGroupMemberData.customMsg1,
   );
-  static XShareGroupMember conflictingMember1 = XShareGroupMember(
+  static ShareGroupMember conflictingMember1 = ShareGroupMember(
     invitationId1,
     TestShareGroupData.groupId1.asString(),
     TestOnlineUserData.userId1.asString(),
@@ -84,7 +84,7 @@ class TestGroupMemberData {
     TestShareGroupData.groupName1,
     TestGroupMemberData.customMsg1,
   );
-  static XShareGroupMember member2 = XShareGroupMember(
+  static ShareGroupMember member2 = ShareGroupMember(
     invitationId2,
     TestShareGroupData.groupId1.asString(),
     TestOnlineUserData.userId2.asString(),
@@ -102,7 +102,7 @@ class TestGroupMemberData {
     TestShareGroupData.groupName1,
     TestGroupMemberData.customMsg1,
   );
-  static XShareGroupMember declinedMember = XShareGroupMember(
+  static ShareGroupMember declinedMember = ShareGroupMember(
     invitationId1,
     TestShareGroupData.groupId1.asString(),
     TestOnlineUserData.userId1.asString(),
@@ -120,7 +120,7 @@ class TestGroupMemberData {
     TestShareGroupData.groupName1,
     TestGroupMemberData.customMsg1,
   );
-  static XShareGroupMember removedMember = XShareGroupMember(
+  static ShareGroupMember removedMember = ShareGroupMember(
     invitationId1,
     TestShareGroupData.groupId1.asString(),
     TestOnlineUserData.userId1.asString(),
@@ -138,7 +138,7 @@ class TestGroupMemberData {
     TestShareGroupData.groupName1,
     TestGroupMemberData.customMsg1,
   );
-  static XShareGroupMember pendingMember = XShareGroupMember(
+  static ShareGroupMember pendingMember = ShareGroupMember(
     invitationId1,
     TestShareGroupData.groupId1.asString(),
     TestOnlineUserData.userId1.asString(),
@@ -156,7 +156,7 @@ class TestGroupMemberData {
     TestShareGroupData.groupName1,
     TestGroupMemberData.customMsg1,
   );
-  static XShareGroupMember newOwnerMember = XShareGroupMember(
+  static ShareGroupMember newOwnerMember = ShareGroupMember(
     invitationId1,
     TestShareGroupData.groupId1.asString(),
     TestOnlineUserData.userId1.asString(),
@@ -174,7 +174,7 @@ class TestGroupMemberData {
     TestShareGroupData.groupName1,
     "",
   );
-  static XShareGroupMember noMessageMember = XShareGroupMember(
+  static ShareGroupMember noMessageMember = ShareGroupMember(
     invitationId1,
     TestShareGroupData.groupId1.asString(),
     TestOnlineUserData.userId1.asString(),
@@ -192,7 +192,7 @@ class TestGroupMemberData {
     TestShareGroupData.groupName1,
     '',
   );
-  static XShareGroupMember noNameMember = XShareGroupMember(
+  static ShareGroupMember noNameMember = ShareGroupMember(
     invitationId1,
     TestShareGroupData.groupId1.asString(),
     TestOnlineUserData.userId1.asString(),
@@ -210,7 +210,7 @@ class TestGroupMemberData {
     TestShareGroupData.groupName1,
     '',
   );
-  static XShareGroupMember noEmailMember = XShareGroupMember(
+  static ShareGroupMember noEmailMember = ShareGroupMember(
     invitationId1,
     TestShareGroupData.groupId1.asString(),
     TestOnlineUserData.userId1.asString(),
